@@ -17,10 +17,14 @@ public class PaintThings {
         ballAmt = paint.amount(bigBall);
         tankAmt = paint.amount(tank);
 
+        double deckRounded = Math.ceil(deckAmt);
+        double ballRounded = Math.ceil(ballAmt);
+        double tankRounded = Math.ceil(tankAmt);
+
         DecimalFormat fmt = new DecimalFormat("0.#");
         System.out.println("\nNumber of gallons of paint needed...");
-        System.out.println("Deck " + fmt.format(deckAmt));
-        System.out.println("Big Ball " + fmt.format(ballAmt));
-        System.out.println("Tank " + fmt.format(tankAmt));
+        System.out.println("Deck " + fmt.format(deckRounded));
+        System.out.println("Big Ball " + fmt.format(ballRounded));
+        System.out.println("Tank " + fmt.format(tankRounded));
     }
 }
